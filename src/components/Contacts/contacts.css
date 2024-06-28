@@ -1,0 +1,182 @@
+/* Original styles */
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full viewport width */
+}
+
+.reviews {
+    height: 60%; /* 60% of the viewport height */
+    width: 100%; /* Full width */
+    background-color: rgb(8, 8, 8); /* Adjust background color as needed */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+.contacts {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: rgb(8, 8, 8);
+}
+.contact-info {
+    height: 90%; /* 30% of the viewport height */
+    width: 50%; /* Full width */
+    background-color: rgb(8, 8, 8); /* Adjust background color as needed */
+    padding: 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    text-align: right;
+    margin-right: 50px;
+}
+
+/* Style for individual reviews */
+.review {
+    margin-bottom: 10px; /* Adjust margin between reviews as needed */
+    background-color: rgb(30, 30, 30); /* Adjust background color as needed */
+    border-radius: 8px;
+    max-width: 400px;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.review .review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.reviewer-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: white;
+}
+
+.review-text {
+    color: white;
+    margin-bottom: 10px;
+    max-width: 300px;
+}
+
+.review-rating {
+    color: yellow; /* Adjust color for star rating as needed */
+}
+
+/* Style for contact information */
+.contact-info h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    gap: 30px;
+    align-items: last baseline;
+    flex-direction: row;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0 0 5px rgba(30, 100, 158, 0.8),
+                 0 0 10px rgba(30, 100, 158, 0.6),
+                 0 0 15px rgba(30, 100, 158, 0.4);
+}
+
+
+.social-icons a:hover {
+    color: rgb(19, 130, 167); /* Adjust hover color as needed */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .contacts-container {
+        background-color: #ab9195;
+        height: fit-content;
+    }
+
+    .reviews, .contacts {
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .reviews {
+        height: fit-content; /* Adjust height for mobile */
+        padding: 10px;
+
+    }
+    .review-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .contacts {
+        height: auto; /* Adjust height for mobile */
+        padding: 10px;
+    }
+
+    .contact-info {
+        width: 90%; /* Adjust width for mobile */
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 20px;
+        background-color: transparent;
+    }
+
+    .review {
+        width: 70%; /* Adjust width for mobile */
+        margin: auto;
+        margin-top: 20px;
+        background-color: #32312f;
+        font-size: 0.8rem;
+    }
+    h2 {
+        font-size: 2rem;
+        color: #32312f;
+        text-decoration: underline;
+    }
+
+    .review-text {
+        max-width: 100%; /* Adjust width for mobile */
+        color: white;
+    }
+
+    .social-icons {
+        width: 90%; /* Adjust width for mobile */
+        flex-direction: row;
+        gap: 10px;
+        background-color: transparent;
+    }
+
+    .social-icons a {
+        margin-right: 0;
+        font-size: 1rem;
+        color: #52c89c;
+        border-radius: 10px;
+        padding: 5px;
+        box-shadow: 0 0 14px #32312f;/* Adjust font size for mobile */
+    }
+}

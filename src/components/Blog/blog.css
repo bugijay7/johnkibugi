@@ -1,0 +1,124 @@
+/* Original styles */
+.blog-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(8, 8, 8);
+}
+
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns in each row */
+    gap: 20px;
+    background-color: rgb(8, 8, 8); 
+    padding-bottom: 30px;/* Gap between grid items */
+}
+
+.post {
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    padding: 10px;
+    background-color: #52c89c;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    max-width: 100%; /* Ensure post fills its container */
+}
+
+.post:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.post-thumbnail {
+    width: 100%; /* Ensure image fills its container */
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-content {
+    margin-top: 10px;
+}
+
+.post-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.post-excerpt {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Mobile styles */
+@media (max-width: 1024px) {
+    .blog-list {
+        grid-template-columns: repeat(3, 1fr); /* Three columns in each row on medium screens */
+        gap: 15px; /* Adjust gap between grid items */
+    }
+
+    .post {
+        width: 100%; /* Full width */
+        padding: 12px; /* Adjust padding */
+    }
+
+    .post-title {
+        font-size: 1rem; /* Adjust font size */
+        margin-bottom: 4px; /* Adjust margin */
+    }
+
+    .post-excerpt {
+        font-size: 0.9rem; /* Adjust font size */
+        margin-bottom: 8px; /* Adjust margin */
+    }
+
+    .post-meta {
+        font-size: 0.8rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-container {
+    border-bottom: none;
+    }
+
+    .blog-list {
+        grid-template-columns: repeat(2, 1fr); /* Two columns in each row on small screens */
+        width: 100%;
+        margin: auto;
+        background-color: #32312f;
+        padding-bottom: 50px;
+         padding-top: 50px;
+    }
+
+    .post {
+        margin-top: 20px;
+        width: 60%;
+        margin: auto;
+    }
+
+    .post-title {
+        font-size: 0.9rem; /* Adjust font size */
+        margin-bottom: 3px; /* Adjust margin */
+    }
+
+    .post-excerpt {
+        font-size: 0.8rem; /* Adjust font size */
+        margin-bottom: 6px; /* Adjust margin */
+    }
+
+    .post-meta {
+        font-size: 0.7rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-list {
+        grid-template-columns: 1fr; /* Single column in each row on extra small screens */
+        gap: 10px; /* Adjust gap between grid items */
+    }
+}

@@ -1,0 +1,97 @@
+/* Default styles */
+.works-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 26px;
+    width: 100%;
+    height: 100%;
+    padding: 10px 5px;
+    margin: 0 auto;
+    background-color: rgb(8, 8, 8);
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.figure-container {
+    background-color: rgb(109, 65, 7);
+    border: 2px solid white;
+    box-shadow: 0 0 24px rgb(56, 22, 22);
+    overflow: hidden;
+    transition: transform 0.2s, filter 0.2s, opacity 0.2s;
+    width: 80%;
+    margin: auto;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.figure-container:hover {
+    transform: scale(1.05);
+}
+
+.figure-container.blurred {
+    filter: blur(4px) grayscale(100%);
+    opacity: 0.5;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    border-radius: 8px; /* Ensure images have rounded corners */
+}
+
+figcaption {
+    padding: 8px;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1rem;
+    color: #e7d2d2;
+    font-weight: 800;
+}
+
+/* Media Query for Tablets and smaller devices */
+@media (max-width: 1024px) {
+    .works-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns in each row */
+    }
+}
+
+/* Media Query for Mobile devices */
+@media (max-width: 768px) {
+    .works-container {
+        grid-template-columns: 1fr; /* Single column in each row */
+        gap: 20px; /* Adjust gap between items */
+        padding: 10px; /* Adjust padding */
+        width: 100%;
+        height: fit-content;
+        background-color: #32312f;
+        margin-bottom: 0;
+        height: 100;
+    }
+
+    .figure-container {
+        width: 70%; /* Full width on mobile */
+        margin-top: 20px;
+    }
+}
+
+/* Media Query for smaller Mobile devices */
+@media (max-width: 480px) {
+    .works-container {
+        gap: 10px; /* Adjust gap between items */
+    }
+
+    .figure-container {
+        box-shadow: none; /* Remove shadow on smaller screens */
+        width: 70%;
+    }
+
+    img {
+        border-radius: 0; /* No rounded corners on images */
+    }
+}
